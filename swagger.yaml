@@ -9,11 +9,11 @@ info:
     email: security@example.com
 
 servers:
-  - url: http://localhost:8000
+  - url: http://172.35.1.151:5000
     description: Local development server
 
 paths:
-  /send:
+  /api/email/send:
     post:
       summary: Send individual email
       description: Send an individual email to a recipient.
@@ -39,7 +39,7 @@ paths:
         '500':
           description: Server error
 
-  /bulk:
+  /api/email/bulk:
     post:
       summary: Send bulk emails
       description: Send bulk emails to multiple recipients.
@@ -65,7 +65,7 @@ paths:
         '500':
           description: Server error
 
-  /template:
+  /api/email/template:
     post:
       summary: Send template-based email
       description: Send a template-based email to a recipient.
@@ -89,7 +89,7 @@ paths:
         '500':
           description: Server error
 
-  /templates/create:
+  /api/email/templates/create:
     post:
       summary: Create new email template
       description: Create a new email template.
@@ -110,7 +110,7 @@ paths:
         '500':
           description: Server error
 
-  /user/settings:
+  /api/email/user/settings:
     post:
       summary: Manage user email settings
       description: Manage user email settings and preferences.
@@ -147,7 +147,7 @@ paths:
         '500':
           description: Server error
 
-  /user/permissions:
+  /api/email/user/permissions:
     post:
       summary: Update user permissions
       description: Update user permissions and group assignments.
